@@ -1,0 +1,90 @@
+.body {
+}
+
+.container {
+  background-color: green;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent {
+  border-radius: 50px;
+  background-image: url(img/1.jpg);
+  color: white;
+  width: 60vw;
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: spin 15s infinite;
+}
+
+.ball {
+  background: radial-gradient(white, red);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 30px;
+  left: 100px;
+
+  /* animation */
+  animation: circle 2s infinite;
+}
+
+@keyframes circle {
+  0% {
+    top: 30px;
+    left: 100px;
+  }
+
+  25% {
+    top: 30px;
+    left: 195vh;
+  }
+
+  50% {
+    top: 80vh;
+    left: 85vw;
+  }
+
+  75% {
+    top: 80vh;
+    left: 100px;
+  }
+
+  100% {
+    top: 30px;
+    left: 100px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    background-image: url(img/1.jpg);
+  }
+
+  25% {
+    background-image: url(img/2.jpg);
+    background-repeat: no-repeat;
+  }
+
+  50% {
+    background-image: url(img/3.jpg);
+  }
+
+  75% {
+    background-image: url(img/4.jpg);
+  }
+
+  100% {
+    background-image: url(img/1.jpg);
+  }
+}
